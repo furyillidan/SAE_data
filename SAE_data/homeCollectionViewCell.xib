@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="homeCollectionViewCell" id="gTV-IL-0wX" customClass="homeCollectionViewCell" customModule="SAE_data" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="323" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDd-V8-B3I">
+                        <rect key="frame" x="321" y="0.0" width="2" height="50"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="cDo-IV-pCV"/>
+                        </constraints>
+                    </view>
+                    <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5L8-rY-O42">
+                        <rect key="frame" x="0.0" y="0.0" width="3" height="50"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="3" id="9JU-MK-vXY"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名稱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdE-vv-PEx">
+                        <rect key="frame" x="3" y="0.0" width="318" height="50"/>
+                        <color key="backgroundColor" red="1" green="0.56150112543299646" blue="0.0" alpha="0.22758032570422534" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="5L8-rY-O42" secondAttribute="bottom" id="5aY-rE-dsv"/>
+                <constraint firstItem="jDd-V8-B3I" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="91E-k5-rp0"/>
+                <constraint firstAttribute="bottom" secondItem="jDd-V8-B3I" secondAttribute="bottom" id="EQE-kT-acS"/>
+                <constraint firstItem="OdE-vv-PEx" firstAttribute="leading" secondItem="5L8-rY-O42" secondAttribute="trailing" id="cFg-M1-Ode"/>
+                <constraint firstItem="jDd-V8-B3I" firstAttribute="leading" secondItem="OdE-vv-PEx" secondAttribute="trailing" id="da9-0S-koJ"/>
+                <constraint firstItem="5L8-rY-O42" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ewm-g2-2zi"/>
+                <constraint firstItem="OdE-vv-PEx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fRq-vC-gbC"/>
+                <constraint firstItem="5L8-rY-O42" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ibZ-8A-gwT"/>
+                <constraint firstAttribute="bottom" secondItem="OdE-vv-PEx" secondAttribute="bottom" id="lGX-X5-f3L"/>
+                <constraint firstAttribute="trailing" secondItem="jDd-V8-B3I" secondAttribute="trailing" id="lkL-Gs-2e6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="309" height="50"/>
+            <connections>
+                <outlet property="infoLabel" destination="OdE-vv-PEx" id="I7u-1M-Ylx"/>
+            </connections>
+            <point key="canvasLocation" x="325.36231884057975" y="117.85714285714285"/>
+        </collectionViewCell>
+    </objects>
+</document>
