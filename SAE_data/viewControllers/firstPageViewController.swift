@@ -11,12 +11,20 @@ import UIKit
 class firstPageViewController: UIViewController {
 
     let firstPageTableView = UITableView()
+    var pageIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setUpTableView()
+        load_Data()
+        
+   
+    }
+    
+    func setUpTableView() {
+        
         self.firstPageTableView.register(UINib(nibName: firstPageTableViewCell.registerID, bundle: nil), forCellReuseIdentifier: firstPageTableViewCell.registerID)
-        self.firstPageTableView.register(UINib(nibName: xibTableViewCell.registerID, bundle: nil), forCellReuseIdentifier: xibTableViewCell.registerID)
         firstPageTableView.frame = CGRect(x: 0, y: 110, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         self.view.addSubview(firstPageTableView)
         firstPageTableView.delegate = self
@@ -24,8 +32,14 @@ class firstPageViewController: UIViewController {
         firstPageTableView.rowHeight = UITableView.automaticDimension
         firstPageTableView.estimatedRowHeight = 80
         firstPageTableView.allowsSelection = false
-   
+        
     }
+    
+    func load_Data () {
+        
+    }
+    
+    
 }
 
 extension firstPageViewController: UITableViewDelegate, UITableViewDataSource {
@@ -35,18 +49,15 @@ extension firstPageViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row > 2{
-          let cell = tableView.dequeueReusableCell(withIdentifier: "firstPageTableViewCell") as! firstPageTableViewCell
+        
+          let cell = tableView.dequeueReusableCell(withIdentifier: IDENTIFIER_NAME_FIRSTPAGE) as! firstPageTableViewCell
               return cell
-        }else{
-          let cell = tableView.dequeueReusableCell(withIdentifier: "xibTableViewCell") as! xibTableViewCell
-              return cell
-        }
-    }
+       }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
         
     }
-    
+        
 }
