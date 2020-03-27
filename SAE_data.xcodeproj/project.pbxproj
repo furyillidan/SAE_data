@@ -26,6 +26,7 @@
 		DD72C42A24288DEA009DA2AD /* HeroListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD72C42924288DEA009DA2AD /* HeroListDataModel.swift */; };
 		DD7F636F2420C06E00A83866 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7F636E2420C06E00A83866 /* TabViewController.swift */; };
 		DD7F63712420CE6400A83866 /* baseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7F63702420CE6400A83866 /* baseViewController.swift */; };
+		DDB8BC4B242C97A2004041D5 /* AllHeroDataListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8BC4A242C97A2004041D5 /* AllHeroDataListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		DD72C42924288DEA009DA2AD /* HeroListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListDataModel.swift; sourceTree = "<group>"; };
 		DD7F636E2420C06E00A83866 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		DD7F63702420CE6400A83866 /* baseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseViewController.swift; sourceTree = "<group>"; };
+		DDB8BC4A242C97A2004041D5 /* AllHeroDataListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHeroDataListModel.swift; sourceTree = "<group>"; };
 		EC9E936C9EE4A61EDB9039A9 /* Pods-SAE_dataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAE_dataTests.release.xcconfig"; path = "Target Support Files/Pods-SAE_dataTests/Pods-SAE_dataTests.release.xcconfig"; sourceTree = "<group>"; };
 		F3BC534110320381F7FCF98F /* Pods_SAE_data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SAE_data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9820F41BD2D5DB14D835AFB /* Pods_SAE_data_SAE_dataUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SAE_data_SAE_dataUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +166,7 @@
 				DDF894682424A5AA00E68838 /* viewControllers */,
 				DDF894672424A54800E68838 /* cell */,
 				DD72C42924288DEA009DA2AD /* HeroListDataModel.swift */,
+				DDB8BC4A242C97A2004041D5 /* AllHeroDataListModel.swift */,
 				DD72C42524288992009DA2AD /* Service.swift */,
 				DD72C42724288A09009DA2AD /* Contant.swift */,
 			);
@@ -454,6 +457,7 @@
 				DD72C42A24288DEA009DA2AD /* HeroListDataModel.swift in Sources */,
 				DD72C42824288A09009DA2AD /* Contant.swift in Sources */,
 				DD4F654B2422070300FD37C4 /* firstPageViewController.swift in Sources */,
+				DDB8BC4B242C97A2004041D5 /* AllHeroDataListModel.swift in Sources */,
 				DD7F636F2420C06E00A83866 /* TabViewController.swift in Sources */,
 				DD4F65452421FDC100FD37C4 /* baseTableViewCell.swift in Sources */,
 				DD3DF85E240F3B3B00EE4C19 /* SceneDelegate.swift in Sources */,

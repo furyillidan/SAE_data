@@ -35,8 +35,6 @@ extension TabViewController : PageboyViewControllerDataSource, TMBarDataSource {
     
     func viewController(for pageboyViewController: PageboyViewController, at index: PageboyViewController.PageIndex) -> UIViewController? {
         
-//        let view = [firstPageViewController(),firstPageViewController(),firstPageViewController(),firstPageViewController()]
-//
         switch index {
         case 0:
             return firstPageViewController()

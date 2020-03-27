@@ -12,6 +12,12 @@ class firstPageTableViewCell: UITableViewCell {
     
     static var registerID = "firstPageTableViewCell"
 
+    @IBOutlet weak var iconImg: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var levelLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

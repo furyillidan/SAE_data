@@ -16,12 +16,13 @@ class HeroListDataModel : NSObject, Codable {
     var green : [HeroData]?
     var helfgod : [HeroData]?
     var netherguest : [HeroData]?
+    var heroCount : String?
 }
 
 
 class HeroData : NSObject, Codable {
-    var firstdraw : String
-    var intro : String
-    var name : String
-    var positioning : String
+    var firstdraw : String?
+    var intro : String?
+    var name : String?
+    var positioning : String?
 }

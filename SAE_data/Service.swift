@@ -29,7 +29,10 @@ class Service: NSObject {
     
     
     func requestCoverData() {
-        self.request(url: API_TITLE + HEROLIST_DATA_URL, method: .get, parameters: nil) { (response) in
+        
+        let url = API_TITLE + HEROLIST_DATA_URL
+        
+        self.request(url:url, method: .get, parameters: nil) { (response) in
             switch response.result {
                 case .success:
                     guard let data = response.data else {
