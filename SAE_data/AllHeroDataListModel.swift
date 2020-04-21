@@ -9,7 +9,12 @@
 import UIKit
 
 class AllHeroDataListModel : NSObject, Codable {
-    var level : String?
-    var name : String?
-    var type : String?
+    
+    var blood : [HeroData]?
+    var dead : [HeroData]?
+    var demon : [HeroData]?
+    var ge : [HeroData]?
+    var green : [HeroData]?
+    var helfgod : [HeroData]?
+    var netherguest : [HeroData]?
 }

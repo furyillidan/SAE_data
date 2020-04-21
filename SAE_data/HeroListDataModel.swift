@@ -21,8 +21,12 @@ class HeroListDataModel : NSObject, Codable {
 
 
 class HeroData : NSObject, Codable {
+    var imgUrl : String?
     var firstdraw : String?
     var intro : String?
     var name : String?
     var positioning : String?
+    var level : String?
+    var type : String?
+    var heroDetail : String?
 }

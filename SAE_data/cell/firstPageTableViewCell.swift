@@ -16,6 +16,11 @@ class firstPageTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var objectLabel: UILabel!
+    @IBOutlet weak var featuresLabel: UILabel!
+    
+    @IBOutlet weak var iconWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var nameLabelConstraint: NSLayoutConstraint!
     
     
     override func awakeFromNib() {

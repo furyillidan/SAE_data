@@ -148,13 +148,35 @@ herolist = {
 allHeroList = []
 allHeroDataDic = {}
 #抓取每個勢力英雄清單
-def allHeroData(heroListUrl, keywordA,keywordB):
+def allHeroData(heroListUrl, dataKeywordA,dataKeywordB,imgKeywordA,imgKeywordB):
+
+ imgList = []
+ x=1
+
+ # url = "https://www.gamertb.com/arena/hero-list-2/"
+
+ request= req.Request(heroListUrl, headers={"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36"})
+ with req.urlopen(request) as response:
+   data=response.read().decode("utf-8")
+
+ soup = BeautifulSoup(data, "lxml")
+
+ img_links = soup.find_all(imgKeywordA, {imgKeywordB : re.compile('.*?\.png')})
+
+ for link in img_links:
+    srcLink = link["src"]
+    if 'hero' in srcLink:
+        imgList.append(srcLink)
+    else:
+        # print('No hero')
+        pass
+
+
  request4= req.Request(heroListUrl, headers={"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36"})
  with req.urlopen(request4) as response:
    data4=response.read().decode("utf-8")
  soup4 = BeautifulSoup(data4, "lxml")
- img_links4 = soup4.find_all([keywordA,keywordB])
- 
+ img_links4 = soup4.find_all([ dataKeywordA, dataKeywordB])
  
  dataList4 = []
  heroDataList4 = []
@@ -177,6 +199,8 @@ def allHeroData(heroListUrl, keywordA,keywordB):
     heroDetailDic['name'] = heroDataList4[t + z]
     heroDetailDic['type'] = heroDataList4[t + z + 1]
     heroDetailDic['level'] = heroDataList4[t + z + 2]
+    if t < len(imgList) :
+      allHeroDataDic['Iamge'] = imgList[t]
     z = z + 2
     heroIntroModelList.append(heroDetailDic)
     
@@ -186,7 +210,7 @@ def allHeroData(heroListUrl, keywordA,keywordB):
 #takeAllHeroDataDic
 for i in range(7):
   heroListUrl="https://www.gamertb.com/arena/hero-list-" + str(i+1)  
-  allHeroDataDic[heroRaceList[i]] = allHeroData(heroListUrl,"table","td")
+  allHeroDataDic[heroRaceList[i]] = allHeroData(heroListUrl,"table","td","img","src")
 #--------------------------------------------------------------------------------------------------
 
 @app.route('/')
